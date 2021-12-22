@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    
+    <link rel="icon"  href="data:image/png;base64,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" type="image/icon type">
+    <title> Homepage</title>
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="login">
+<form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default"><h2>Name of the Pokemon</h2></span>
+        <input name="Pokemon Name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <br><hr>
+    <h3>Total sum of all power: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="total" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>HP Power: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="HP" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Attack power: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="attack" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Defence power: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="defence" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Special Attack power: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="special" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Special Defence power: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="speciald" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Speed: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="speed" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Currect Generation of Pokemon: </h3>
+    <select name="gen" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="6">6</option>
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+    </select>
+    <br><hr>
+    <h3>Pokemon has gender : </h3>
+    <select name="hasgen" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <br><hr>
+    <h3>Pr_Male: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in HP</span>
+        <input name="Pr_Male" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Does the pokemon have MegaEvolution: </h3>
+    <select name="hasMegaEvolution" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    <br><hr>
+    <h3>Height of Pokemon: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in kg</span>
+        <input name="height" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Weight of Pokemon: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">in kg</span>
+        <input name="weight" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <h3>Catch Rate of Pokemon: </h3>
+    <div class="input-group mb-3">
+        <span class="input-group-text">numbers</span>
+        <input name="catch" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div>
+    <br><hr>
+    <!--
+     bipedal_tailed      158
+    quadruped           135
+    bipedal_tailless    109
+    two_wings            63
+    head_arms            39
+    head_only            34
+    with_fins            31
+    insectoid            30
+    head_base            30
+    serpentine_body      29
+    four_wings           18
+    head_legs            17
+    multiple_bodies      15
+    several_limbs        13
+     -->
+    <h3>Body Style of Pokemon: </h3>
+    <select name="bodystyle" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="158">bipedal_tailed</option>
+        <option value="135">quadruped</option>
+        <option value="109">bipedal_tailless</option>
+        <option value="63">two_wings</option>
+        <option value="39">head_arms</option>
+        <option value="34">head_only</option>
+        <option value="31">with_fins</option>
+        <option value="30">insectoid</option>
+        <option value="30">head_base</option>
+        <option value="29">serpentine_body</option>
+        <option value="18">four_wings</option>
+        <option value="17">head_legs</option>
+        <option value="15">multiple_bodies</option>
+        <option value="13">several_limbs</option>
+    </select>
+    <br><hr>
+    <!-- Dark	Dragon	Electric	Fighting	Fire	Flying	Grass	Normal	Poison	Rock	Water	 -->
+    <h3>Pokemon Type: </h3>
+    <select name="type" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="Dark">Dark</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Electric">Electric</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Fire">Fire</option>
+        <option value="Flying">Flying</option>
+        <option value="Grass">Grass</option>
+        <option value="Normal">Normal</option>
+        <option value="Poison">Poison</option>
+        <option value="Rock">Rock</option>
+        <option value="Water">Water</option>
+    </select>
+    <br><hr>
+    <!-- Black	Blue	Brown	Green	Grey	Pink	Purple	Red	White	Yellow -->
+    <h3>Pokemon Color: </h3>
+    <select name="color" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Open this select menu</option>
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Brown">Brown</option>
+        <option value="Green">Green</option>
+        <option value="Grey">Grey</option>
+        <option value="Pink">Pink</option>
+        <option value="Purple">Purple</option>
+        <option value="Red">Red</option>
+        <option value="White">White</option>
+        <option value="Yellow">Yellow</option>
+     </select>
+    <br>
+    <br>
+    
+    <button class = "btn"type="submit" name="pred_button" value="Save&Next">Confirm Submission</button>
+    
+</form>
+</div>
+</body>
