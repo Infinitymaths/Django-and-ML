@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right,#000000,#656c6e);
+}
+
+.center{
+    display:flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.container{
+    height:250px;
+    background:white;
+    top: 10%;
+}
+
+.container .icons{
+    margin:1.2em;
+    width:50px;
+    height:50px;
+    position:relative;
+    z-index: 10;
+}
+
+.container.icons a{
+    padding: 0.6em 0.7em;
+    color:rgb(44,44,44);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    border:2px solid white;
+    transition: color 0.4s;
+}
+
+.container .icons a:hover{
+    color:rgb(10, 8, 8);
+}
+.container .icons::before,.container .icons::after{
+    content:'';
+    position:absolute; top:-5px; left:-5px;
+    width:100%;height:100%;
+    background:#2f80ed; z-index: -1;
+    transition: clip-path 0.4s;
+}
+
+.container .icons::after{
+    top:5px;
+    left:5px;
+    background:#56ccf2;
+}
+.container .icons::before{
+    clip-path: polygon(0 0,0 0,0 0,0 0);
+}
+
+.container.icons:hover::before{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    border-radius: 0 0 50px 0;
+}
+
+.container .icons::after{
+    clip-path:polygon(100% 100%,100% 100%,100% 100%,100% 100%);
+}
+
+.container .icons:hover::after{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    border-radius: 50px 0 0 0;
+}
+
+
+button{
+    background:#55074e;
+    color:rgba(248, 248, 248, 0.87);
+    width:90vh;
+    height:40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border:none;
+    transition:all .4s;
+    left: 30%;
+    position:absolute;
+    bottom:10%;
+}
+
+.btn:hover{
+    border-radius: 5px;
+    transform:translate(-10px);
+    box-shadow: 0 7px 0 -2px #d60101,
+    0 15px 0 -4px #0a0a0a,
+    0 16px 10px -3px #0029dd;
+}
+
+@media screen and (max-width:1000px)
+{
+    body{
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right,#000000,#656c6e);
+    }
+    .container{
+        height:100px;
+        background:white;
+        top: 10%;
+    }
+    
+    .container .icons{
+        margin:1.2em;
+        width:20px;
+        height:20px;
+        position:relative;
+        z-index: 4;
+    }
+    
+    .container.icons a{
+        padding: 0.2em 0.3em;
+        color:rgb(44,44,44);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        border:2px solid white;
+        transition: color 0.4s;
+    }
+    
+    .container .icons a:hover{
+        color:rgb(10, 8, 8);
+    }
+    .container .icons::before,.container .icons::after{
+        content:'';
+        position:absolute; top:-5px; left:-5px;
+        width:100%;height:100%;
+        background:#2f80ed; z-index: -1;
+        transition: clip-path 0.4s;
+    }
+    
+    .container .icons::after{
+        top:5px;
+        left:5px;
+        background:#56ccf2;
+    }
+    .container .icons::before{
+        clip-path: polygon(0 0,0 0,0 0,0 0);
+    }
+    
+    .container.icons:hover::before{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        border-radius: 0 0 50px 0;
+    }
+    
+    .container .icons::after{
+        clip-path:polygon(100% 100%,100% 100%,100% 100%,100% 100%);
+    }
+    
+    .container .icons:hover::after{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        border-radius: 50px 0 0 0;
+    }
+    
+    
+    button{
+        bottom:10%;
+        width:20vh;
+        height:40px;
+        color:rgb(231, 195, 231);
+        background:#a3067cee;
+        font-size: 1.1em;
+        cursor: pointer;
+        border:none;
+        transition:all .4s;
+        left: 30%;
+        position:absolute;
+        
+    }
+    button:hover{
+        border-radius: 5px;
+        transform:translate(-10px);
+        box-shadow: 0 7px 0 -2px #d60101,
+        0 15px 0 -4px #0a0a0a,
+        0 16px 10px -3px #0029dd;
+    }   
+}
