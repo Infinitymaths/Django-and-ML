@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hindi_Siliguri:wght@700&display=swap');
+*{
+    margin:25px 10px -10px;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue',cursive;
+}
+body{
+    background: linear-gradient(to right,#3c1053,#ad5389);
+}
+/* div form span input{
+    max-height:10px;
+    top:10%; 
+   }   */
+
+
+
+.login form{
+    display:flexbox;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    color: darkgrey;
+    
+}
+
+.login form input{
+    width:250px;
+    height:35px;
+    margin:8px;
+    box-sizing: border-box;
+    background:linear-gradient(to right,#240b36,#c31432);
+    /* padding-left: 18px; */
+    outline: none;
+    transition: all .4s;
+    border:3px solid red;
+}
+
+.login form input:focus{
+    background:linear-gradient(to right,#e6e6e6,#430a6b); 
+}
+
+.login form .btn{
+    background:linear-gradient(to right,#240b36,#c31432);
+    width:180px;
+    height:50px;
+    border:none;
+    font-size:1.3rem;
+    color:white;
+    cursor:pointer;
+    border-radius: 0 25px;
+    position: relative;
+    transition: all .6s;
+}
+
+.login form .btn:hover{
+    border-radius: 25px 0;
+}
+
+.login form .btn::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    background:linear-gradient(to right,#240b36,#c31432);
+    width:100%;
+    height:100%;
+    filter:blur(22px);
+    transform: scale(0.9,0.8) translateY(20px);
+    z-index: -1;
+    opacity: 0;
+    transition: all .6s;
+}
+
+.login form .btn:hover::before{
+    opacity:1;
+}
+
+@media screen and (max-width:1000px)
+{
+    *{
+        margin: 10px 5px -5px;
+    }   
+    .login form input{
+        width:150px;
+        height:20px;
+        margin:2px;
+        border:1px solid red;
+    }
+
+    .login form .btn{
+        width:80px;
+        height:20px;
+        font-size:0.6rem;
+        border-radius: 0 10px;        
+    }
+    
+    .login form .btn:hover{
+        border-radius: 10px 0;
+    }   
+       
+}
