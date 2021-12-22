@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #f1f1f1;*/
+    background: linear-gradient(to right,#3c1053,#ad5389);
+}
+
+h1{
+    color: #f11313;
+}
+.text{
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:transparent;
+    -webkit-text-stroke: 2px white;
+    font-size: 20px;
+    font-family: "Hindi-Siliguri",sans-serif;
+    text-shadow: 0px 0px #ff0101;
+    transition: all .4s;
+}
+
+.text:hover{
+    text-shadow: 12px 12px #f00f80,17px 17px #a00303ce, 22px 22px 50px rgb(73,73,73);
+}
+
+.btn{
+    width:100vh;
+    height:40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background:#171717;
+    color:white;
+    border:none;
+    transition:all .4s;
+}
+
+.btn:hover{
+    border-radius: 5px;
+    transform:translate(-10px);
+    box-shadow: 0 7ps 0 -2px #d60101,
+    0 15px 0 -4px #0a0a0a,
+    0 16px 10px -3px #0029dd;
+}
+
+@media screen and (max-width:1000px)
+{
+    body{
+        min-height: 40vh;
+    }   
+
+    .text{
+        font-size: 10px;
+    }
+    
+    .text:hover{
+        text-shadow: 6px 6px #f00f80,11px 11px #a00303ce, 17px 17px 30px rgb(73,73,73);
+    }
+    button{
+        bottom:-10%;
+        width:20vh;
+        height:40px;
+        background:#0f0ce060;
+        color:rgb(247, 242, 242);
+        font-size: 1.1em;
+        cursor: pointer;
+        border:none;
+        transition:all .4s;
+        left: 10%;
+        position:absolute;
+        
+    }
+    
+    button:hover{
+        border-radius: 5px;
+        transform:translate(-10px);
+        box-shadow: 0 7px 0 -2px #d60101,
+        0 15px 0 -4px #0a0a0a,
+        0 16px 10px -3px #0029dd;
+    }
+}
